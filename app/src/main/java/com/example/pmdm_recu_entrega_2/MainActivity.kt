@@ -7,18 +7,22 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Button
 import android.widget.TextView
+import kotlin.random.Random
+import kotlin.random.Random.Default.nextInt
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView = findViewById<TextView>(R.id.textViewPrimeraActividad)
+        val texto = findViewById<TextView>(R.id.textViewPrimeraActividad)
         val boton1 = findViewById<Button>(R.id.button1)
         val boton2 = findViewById<Button>(R.id.button2)
         val boton3 = findViewById<Button>(R.id.button3)
+        val frase = "Click hecho! "
 
-        textView.addTextChangedListener(object:TextWatcher{
+
+        texto.addTextChangedListener(object:TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
 
@@ -33,12 +37,19 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        boton1.setOnClickListener{
+            texto.append(frase)
+        }
 
-            boton3.setOnClickListener {
-                val text = textView.text
-                val intent = Intent(this, MainActivity2::class.java)
-                intent.putExtra(MainActivity2.PARAMTEXT, text.toString())
-                startActivity(intent)
-            }
+        boton2.setOnClickListener{
+            texto.append(Random.nextInt(0, 10).toString()+" ")
+        }
+
+        boton3.setOnClickListener {
+            val text = texto.text
+            val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra(MainActivity2.PARAMTEXT, text.toString())
+            startActivity(intent)
+        }
     }
 }

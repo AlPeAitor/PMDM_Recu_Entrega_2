@@ -14,14 +14,16 @@
         android:id="@+id/editTextSecondActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Introduzca un dígito"
+        android:hint="Introduzca un dígito"
         android:inputType="numberDecimal"
         />
     <TextView
+        android:id="@+id/textViewSecondActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"/>
     <Button
+        android:id="@+id/botonSecondActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
