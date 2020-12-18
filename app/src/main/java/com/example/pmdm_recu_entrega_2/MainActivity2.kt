@@ -53,11 +53,14 @@ class MainActivity2 : AppCompatActivity() {
         val num = aux.toInt()
         val lista = texto
         var salida = ""
+        var cont = 0
 
         lista.forEach{
-            salida += it
-            repeat(num){
+                salida += it
+            cont++
+            if(cont == num) {
                 salida += " "
+                cont=0
             }
         }
 
