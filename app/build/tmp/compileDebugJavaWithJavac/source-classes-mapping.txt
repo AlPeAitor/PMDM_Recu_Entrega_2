@@ -1,0 +1,2 @@
+com/example/pmdm_recu_entrega_2/BuildConfig.java
+ com.example.pmdm_recu_entrega_2.BuildConfig

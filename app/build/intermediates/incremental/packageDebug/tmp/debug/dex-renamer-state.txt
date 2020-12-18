@@ -1,0 +1,4 @@
+#Fri Dec 18 22:35:00 CET 2020
+base.0=C\:\\Users\\Aitor\\AndroidStudioProjects\\PMDM_Recu_Entrega_2\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
